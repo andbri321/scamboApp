@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-
+gem 'rails-assets-bootstrap', '4.1.0', source: 'http://rails-assets.org'
 #https://github.com/dreamingechoes/bootstrap_sb_admin_base_v2
 gem 'bootstrap_sb_admin_base_v2'
 
