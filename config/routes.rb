@@ -1,10 +1,18 @@
 Rails.application.routes.draw do
-  namespace :site do
-  get 'home/index'
-  end
+  
+  get 'backoffice', to: 'backoffice/dashboard#index'
 
   namespace :backoffice do
-  get 'dashboard/index'
+     #resources :categories, only: [:create]
+     #especifica os tipos
+     resources :categories, except: [:show,:destroy]
+    #resources cria todos tipos de rotas 
+    #get 'categories/index'
+    get 'dashboard', to: 'dashboard#index'
+  end
+
+  namespace :site do
+  get 'home', to: 'home#index'
   end
 
   devise_for :admins
