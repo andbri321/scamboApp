@@ -4,6 +4,8 @@ gem 'rails-assets-bootstrap', '4.1.0', source: 'http://rails-assets.org'
 #https://github.com/dreamingechoes/bootstrap_sb_admin_base_v2
 gem 'bootstrap_sb_admin_base_v2'
 
+gem 'rails-assets-notifyjs', source: 'https://rails-assets.org'
+
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.5'
 # Use sqlite3 as the database for Active Record
@@ -21,6 +23,7 @@ gem 'rails-i18n'
 gem 'foreman'
 gem 'devise'
 gem 'devise-i18n'
+gem 'faker'
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'

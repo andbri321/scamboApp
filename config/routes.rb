@@ -3,19 +3,21 @@ Rails.application.routes.draw do
   get 'backoffice', to: 'backoffice/dashboard#index'
 
   namespace :backoffice do
-     #resources :categories, only: [:create]
-     #especifica os tipos
-     resources :categories, except: [:show,:destroy]
+    #resources :categories, only: [:create]
+    #especifica os tipos
+    resources :categories, except: [:show,:destroy]
+    resources :admins, except: [:show]
     #resources cria todos tipos de rotas 
     #get 'categories/index'
     get 'dashboard', to: 'dashboard#index'
+    get 'admins/index'
   end
 
   namespace :site do
-  get 'home', to: 'home#index'
+    get 'home', to: 'home#index'
   end
 
-  devise_for :admins
+  devise_for :admins, :skip => [:registrations]
   devise_for :merbers
   
   root 'site/home#index'
