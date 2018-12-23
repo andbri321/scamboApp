@@ -5,10 +5,12 @@ namespace :utils do
   	puts "Cadastrando Administradores"
 
   	10.times do 
-  		Admin.create!(email: Faker::Internet.email,
+  		Admin.create!(
+        name: Faker::Name.name,
+        email: Faker::Internet.email,
   			password: "123123",
-  			password_confirmation: "123123"
-  			)
+  			password_confirmation: "123123",
+        role: [0,1,1,1].sample)
   	end
   	puts "Administrador cadastrados com sucesso !!"
   end

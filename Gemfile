@@ -1,10 +1,8 @@
 source 'https://rubygems.org'
 
-gem 'rails-assets-bootstrap', '4.1.0', source: 'http://rails-assets.org'
 #https://github.com/dreamingechoes/bootstrap_sb_admin_base_v2
 gem 'bootstrap_sb_admin_base_v2'
 
-gem 'rails-assets-notifyjs', source: 'https://rails-assets.org'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.5'
@@ -19,11 +17,19 @@ gem 'coffee-rails', '~> 4.1.0'
 # See https://github.com/rails/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
 
+
+
 gem 'rails-i18n'
 gem 'foreman'
 gem 'devise'
 gem 'devise-i18n'
 gem 'faker'
+
+source 'https://rails-assets.org' do
+	gem 'rails-assets-bootbox'
+	gem 'rails-assets-notifyjs'
+	gem 'rails-assets-bootstrap', '4.1.0'
+end
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
