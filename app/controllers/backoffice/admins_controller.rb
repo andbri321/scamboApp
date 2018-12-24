@@ -31,6 +31,9 @@ class Backoffice::AdminsController < BackofficeController
   def update
   	
   	if @admin.update(params_admin)
+      # usa o backgoround job para enviar os emails
+      #AdminsMailer.update_email(current_admin,@admin).deliver_later
+      AdminMailer.update_email(current_admin,@admin).deliver_now
       redirect_to backoffice_admins_path, notice:"O administrador (#{@admin.email}) foi atualizada com sucesso !"
     else
       render :edit

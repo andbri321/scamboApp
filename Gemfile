@@ -17,7 +17,6 @@ gem 'coffee-rails', '~> 4.1.0'
 # See https://github.com/rails/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
 
-
 gem 'pundit'
 gem 'rails-i18n'
 gem 'foreman'
@@ -25,6 +24,7 @@ gem 'devise'
 gem 'devise-i18n'
 gem 'faker'
 gem 'enum_help'
+
 
 source 'https://rails-assets.org' do
 	gem 'rails-assets-bootbox'
@@ -55,6 +55,9 @@ group :development, :test do
   gem 'byebug'
   gem 'better_errors'
   gem 'rails-erd'
+  
+  # usada p visualizar o email no browser
+  gem 'mailcatcher'
 end
 
 group :development do
