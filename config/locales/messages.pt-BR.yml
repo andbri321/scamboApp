@@ -1,6 +1,6 @@
 'pt-BR':
   messages:
-    confirm: Tem certeza *?
+    confirm: Tem certeza ?
     confirm_with: Você deseja realmente excluir (<b>%{item}<b>)?
     listing: Listando %{model}
     editing: Editando %{model}

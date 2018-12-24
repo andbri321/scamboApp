@@ -1,10 +1,13 @@
 class Backoffice::AdminsController < BackofficeController
   before_action :set_category, only: [:edit,:update,:destroy]
+  after_action :verify_authorized, only: [:new,:destroy]
+  after_action :verify_policy_scoped, only: :index
 
   def index
     #@admins = Admin.all
     #@admins = Admin.with_full_access
-  	@admins = Admin.with_restricted_access
+    #@admins = Admin.with_restricted_access
+  	@admins = policy_scope(Admin)
   end
 
   def new
@@ -35,6 +38,7 @@ class Backoffice::AdminsController < BackofficeController
   end
 
   def destroy
+    authorize @admin
     admin_email = @admin.email
     if @admin.destroy
        redirect_to backoffice_admins_path, notice:"O administrador (#{admin_email}) foi excluido com sucesso !"
@@ -59,7 +63,7 @@ class Backoffice::AdminsController < BackofficeController
       params[:admin].except!(:password,:password_confirmation)
     end
     
-    params.require(:admin).permit(:name,:email,:password,:password_confirmation)
+    params.require(:admin).permit(policy(@admin).permitted_attributes)
   end
 
 end
