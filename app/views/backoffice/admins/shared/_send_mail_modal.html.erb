@@ -8,25 +8,26 @@
         </button>
       </div>
       <div class="modal-body">
-        <form>
-          <%= form_tag(backoffice_send_mail_index_path) do %>
+          <%= form_tag(backoffice_send_mail_index_path, remote: true) do %>
+          <div class="form-group">
             <label for="recipient-name" class="col-form-label"> <%= t('labels.recipient') %> </label>
-            <input type="text" disabled="disabled" class="form-control" id="recipient-text">
+            <%= text_field_tag(:'recipient-text',nil,class:"form-control",id:"recipient-text",readonly:"readonly") %>
           </div>
           <div class="form-group">
             <label for="subject-name" class="col-form-label"> <%= t('labels.subject') %> </label>
-            <input type="text" class="form-control" id="subject-text">
+            <%= text_field_tag(:'subject-text',nil,class:"form-control",id:"subject-text",required:"required") %>
           </div>
           <div class="form-group">
             <label for="message-text" class="col-form-label">Message:</label>
-            <textarea class="form-control" id="message-text"></textarea>
+            <%= text_area_tag(:'message-text',nil,class:"form-control",id:"message-text",required:"required" ) %>
           </div>
-        <% end %>
+        
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Send message</button>
+        <%= submit_tag 'Send message',class:"btn btn-primary"%>
       </div>
+      <% end %>
     </div>
   </div>
 </div>
