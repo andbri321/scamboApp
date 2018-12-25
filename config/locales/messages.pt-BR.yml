@@ -9,3 +9,4 @@
     created: Item criado com sucesso !
     updated: Item atualizado com sucesso !
     destroyed: Item excluído com sucesso !
+    destroyed_with: O usuário %{item} foi excluído com sucesso !
