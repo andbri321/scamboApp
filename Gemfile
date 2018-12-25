@@ -24,7 +24,7 @@ gem 'devise'
 gem 'devise-i18n'
 gem 'faker'
 gem 'enum_help'
-
+gem 'lerolero_generator'
 
 source 'https://rails-assets.org' do
 	gem 'rails-assets-bootbox'

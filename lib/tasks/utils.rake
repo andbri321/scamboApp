@@ -23,7 +23,7 @@ namespace :utils do
       Ad.create!(
         title: Faker::Lorem.sentence([2,3,4,5].sample),
         email: LeroleroGenerator::paragraph(Random.rand(3)),
-        member: Member.all.sample,
+        member: Merber.all.sample,
         category: Category.all.sample)
     end
     puts "Anúncios cadastrados com sucesso !!"
