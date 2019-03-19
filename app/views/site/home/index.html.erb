@@ -53,10 +53,10 @@
                   <a href="#"><img class="card-img-top" src="http://placehold.it/700x400" alt=""></a>
                   <div class="card-body">
                     <h4 class="card-title">
-                      <a href="#"><%= ad.title %></a>
+                      <a href="#"><%= truncate(ad.title,lenght:20) %></a>
                     </h4>
                     <h5>$24.99</h5>
-                    <p class="card-text"><%= ad.description %></p>
+                    <p class="card-text"><%= truncate(ad.description,lenght:100) %></p>
                   </div>
                   <div class="card-footer">
                     <small class="text-muted">&#9733; &#9733; &#9733; &#9733; &#9734;</small>

@@ -17,6 +17,7 @@ gem 'coffee-rails', '~> 4.1.0'
 # See https://github.com/rails/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
 
+gem 'money-rails'
 gem 'pundit'
 gem 'rails-i18n'
 gem 'foreman'
@@ -55,7 +56,7 @@ group :development, :test do
   gem 'byebug'
   gem 'better_errors'
   gem 'rails-erd'
-  
+
   # usada p visualizar o email no browser
   gem 'mailcatcher'
 end
@@ -67,4 +68,3 @@ group :development do
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
 end
-
