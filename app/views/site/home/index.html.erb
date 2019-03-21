@@ -55,7 +55,7 @@
                     <h4 class="card-title">
                       <a href="#"><%= truncate(ad.title,lenght:20) %></a>
                     </h4>
-                    <h5>$24.99</h5>
+                    <h5><%= humanized_money_with_symbol ad.price %></h5>
                     <p class="card-text"><%= truncate(ad.description,lenght:100) %></p>
                   </div>
                   <div class="card-footer">
