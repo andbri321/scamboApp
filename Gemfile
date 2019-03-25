@@ -3,6 +3,7 @@ source 'https://rubygems.org'
 #https://github.com/dreamingechoes/bootstrap_sb_admin_base_v2
 gem 'bootstrap_sb_admin_base_v2'
 
+gem 'paperclip', '~> 5.0.0'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.5'
