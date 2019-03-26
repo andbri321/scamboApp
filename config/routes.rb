@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  
+
   devise_for :members
   get 'backoffice', to: 'backoffice/dashboard#index'
 
@@ -9,7 +9,7 @@ Rails.application.routes.draw do
     resources :send_mail,only: [:edit,:create]
     resources :categories, except: [:show,:destroy]
     resources :admins, except: [:show]
-    #resources cria todos tipos de rotas 
+    #resources cria todos tipos de rotas
     #get 'categories/index'
     get 'dashboard', to: 'dashboard#index'
     get 'admins/index'
@@ -17,10 +17,16 @@ Rails.application.routes.draw do
 
   namespace :site do
     get 'home', to: 'home#index'
+
+    namespace :profile do
+      resources :dashboard, only: [:index]
+      resources :ads, only: [:index,:edit,:update]
+    end
+
   end
 
   devise_for :admins, :skip => [:registrations]
-  
+
   root 'site/home#index'
 
   # The priority is based upon order of creation: first created -> highest priority.

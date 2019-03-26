@@ -1,28 +1,14 @@
-== README
+# Ruby on Rails - Curso Completo - Módulo 3
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Link do curso :
+>> https://www.udemy.com/rubyonrails/
 
-Things you may want to cover:
+## Dependências do Projeto
+Dillinger is a cloud-enabled, mobile-ready, offline-storage, AngularJS powered HTML5 Markdown editor.
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+## ImageMagick
+* https://imagemagick.org/
+```
+sudo apt-get update
+sudo apt-get install imagemagick
+```
