@@ -40,7 +40,8 @@
         <div class="sidebar-heading">Start Bootstrap </div>
         <div class="list-group list-group-flush">
           <a href="#"> <%= link_to 'Dashboard', site_profile_dashboard_index_path,class:"list-group-item list-group-item-action bg-light" %> </a>
-          <a href="#"> <%= link_to 'Meu Anúncios', site_profile_ads_path,class:"list-group-item list-group-item-action bg-light" %> </a>
+          <a href="#"> <%= link_to 'Meus Anúncios', site_profile_ads_path,class:"list-group-item list-group-item-action bg-light" %> </a>
+          <a href="#"> <%= link_to 'Novo Anúncio', new_site_profile_ad_path,class:"list-group-item list-group-item-action bg-light" %> </a>
         </div>
       </div>
       <!-- /#sidebar-wrapper -->
@@ -80,10 +81,6 @@
 
         <div class="container-fluid">
           <%= yield %>
-          <!-- <h1 class="mt-4">Simple Sidebar</h1> -->
-          <!-- <p>The starting state of the menu will appear collapsed on smaller screens, and will appear non-collapsed on larger screens. When toggled using the button below, the menu will change.</p>
-          <!-- <p>The starting state of the menu will appear collapsed on smaller screens, and will appear non-collapsed on larger screens. When toggled using the button below, the menu will change.</p>
-          <p>Make sure to keep all page content within the <code>#page-content-wrapper</code>. The top navbar is optional, and just for demonstration. Just create an element with the <code>#menu-toggle</code> ID which will toggle the menu when clicked.</p> -->
         </div>
       </div>
       <!-- /#page-content-wrapper -->
@@ -91,9 +88,10 @@
     </div>
     <!-- /#wrapper -->
 
+    <% if notice %>
+        <%= javascript_tag "$.notify('#{notice}','success');" %>
+    <% end %>
 
-
-    <!-- aqui  -->
 
   </body>
 

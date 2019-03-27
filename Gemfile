@@ -4,7 +4,7 @@ source 'https://rubygems.org'
 gem 'bootstrap_sb_admin_base_v2'
 
 gem 'paperclip', '~> 5.0.0'
-
+gem "font-awesome-rails"
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.5'

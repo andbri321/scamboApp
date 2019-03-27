@@ -255,6 +255,7 @@ DEPENDENCIES
   devise-i18n
   enum_help
   faker
+  font-awesome-rails
   foreman
   jbuilder (~> 2.0)
   jquery-rails
@@ -277,4 +278,4 @@ DEPENDENCIES
   web-console (~> 2.0)
 
 BUNDLED WITH
-   1.17.2
+   1.17.3
